@@ -1,5 +1,7 @@
 ## Icarus - Custom Discord bot for the [LDSG Community](https://ldsgamers.com)
 
+# THIS VERSION OF ICARUS HAS BEEN UPDATED AND CAN BE FOUND [HERE] (https://LDS-Gamers-Studios/icarus5.5)
+
 Icarus is built in Node.js for the LDS Gamers community. It runs on the [Augur framework](https://github.com/Gaiwecoor/augurbot), utilizing the [Discord.js library](https://discord.js.org/).
 
 Pull requests from the community are welcome. Speak with Gaiwecoor on Discord prior to starting to ensure your features fit with the bot.
