@@ -1,0 +1,103 @@
+{
+  "name": "role",
+  "description": "Manage your opt-in roles or equip a color",
+  "options": [
+    {
+      "type": 1,
+      "name": "add",
+      "description": "Give yourself a role. For a list of all assignable roles, set list to true",
+      "options": [
+        {
+          "type": 8,
+          "name": "role",
+          "description": "The role to add (input random if setting list to true)",
+          "required": true
+        },
+        {
+          "type": 5,
+          "name": "list",
+          "description": "Get a list of all self-assignable roles"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "name": "remove",
+      "description": "Remove a self-assignable role. For a list of roles you can remove, set list to true",
+      "options": [
+        {
+          "type": 8,
+          "name": "role",
+          "description": "The role to remove (input random if setting list to true)",
+          "required": true
+        },
+        {
+          "type": 5,
+          "name": "list",
+          "description": "Get a list of all the roles you can remove"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "name": "inventory",
+      "description": "Get a list of all color roles you can equip"
+    },
+    {
+      "type": 1,
+      "name": "equip",
+      "description": "Equip a role's color. Use /role inventory to get a list of available roles.",
+      "options": [
+        {
+          "type": 8,
+          "name": "role",
+          "description": "The role to equip. Leave blank to unequip any color roles"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "name": "adulting",
+      "description": "[MOD] Give or remove someone from the adulting role",
+      "options": [
+        {
+          "type": 6,
+          "name": "user",
+          "description": "The user to remove from the adulting role",
+          "required": true
+        },
+        {
+          "type": 5,
+          "name": "remove",
+          "description": "Whether or not to remove the user from the adulting role"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "name": "id",
+      "description": "Get the ID of a role",
+      "options": [
+        {
+          "type": 8,
+          "name": "role",
+          "description": "The role to look up",
+          "required": true
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "name": "whohas",
+      "description": "Get a list of people who have a role",
+      "options": [
+        {
+          "type": 8,
+          "name": "role",
+          "description": "The roll to look up",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

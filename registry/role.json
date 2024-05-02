@@ -48,6 +48,19 @@
       ]
     },
     {
+      "name": "equip",
+      "description": "Equip a color role",
+      "type": 1,
+      "options": [
+        {
+          "name": "role",
+          "description": "The role to equip",
+          "type": 8,
+          "required": true
+        }
+      ]
+    },
+    {
       "name": "inventory",
       "description": "View all equippable roles and equip a color from your inventory",
       "type": 1
