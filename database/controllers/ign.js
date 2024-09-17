@@ -4,6 +4,13 @@ const Ign = require("../models/Ign.model");
 
 module.exports = {
   /**
+   * @typedef ign
+   * @prop {string} discordId The ID of the user
+   * @prop {string} system The system of the IGN
+   * @prop {string} ign The saved value of the IGN
+   */
+
+  /**
    * Delete an IGN
    * @function delete
    * @param {string|Discord.User|Discord.GuildMember} discordId Which user's IGN to delete
@@ -29,9 +36,18 @@ module.exports = {
     else return Ign.find({ discordId }).exec();
   },
   /**
+   * Find a list of users
+   * @param {string} ign The IGN to find
+   * @param {string} system Which system IGN to find
+   * @returns {Promise<Array<ign>>}
+   */
+  findUsername: function(ign, system) {
+    return Ign.find({ ign: { $regex: new RegExp(`^${ign}$`, 'i') }, system }).exec();
+  },
+  /**
    * Find a list of IGNs for a given system
    * @function getList
-   * @param {string} system Whcih system list to fetch
+   * @param {string} system Which system list to fetch
    * @returns {Promise<Array<ign>>}
    */
   getList: function(system) {
@@ -43,7 +59,7 @@ module.exports = {
    * @param {string|Discord.User|Discord.GuildMember} discordId Which user's IGN to save
    * @param {string} system Which system IGN to save
    * @param {string} ign The IGN to save
-   * @returns {Promise{ign}}
+   * @returns {Promise<ign>}
    */
   save: function(discordId, system, ign) {
     if (discordId.id) discordId = discordId.id;
